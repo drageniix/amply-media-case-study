@@ -35,7 +35,7 @@
     }
     &--header {
         font-size: 2rem;
-        margin-bottom: -1rem;
+        margin-bottom: -0.25rem;
 
         @include respond(phone) {
             display: none;
