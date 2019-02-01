@@ -1,0 +1,15 @@
+.weather-forecast {
+    text-align: end;
+    margin-right: 2rem;
+    margin-top: -2rem;
+    span {
+        font-size: 1.6rem;
+        margin-right: 1rem;
+    }
+
+    @include respond(phone) {
+        margin-top: -1rem;
+        margin-right: 0;
+        text-align: center;
+    }
+}

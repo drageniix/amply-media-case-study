@@ -1,0 +1,14 @@
+.action {
+    background: rgba(#eee, 0.9);
+    padding: 2rem;
+    border-radius: 1rem;
+    animation: slideUp 1s;
+    min-width: 32rem;
+    width: 55%;
+    max-width: 50rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: stretch;
+    @include clearfix;
+}

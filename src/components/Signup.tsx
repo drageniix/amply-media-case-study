@@ -14,7 +14,7 @@ export class Signup extends Component<any, any> {
         return (
             <button
                 onClick={this.props.signUp}
-                className="action__signup"
+                className="signup"
                 disabled={!this.props.acceptedTerms || !this.props.location}>
                 Sign Up
             </button>

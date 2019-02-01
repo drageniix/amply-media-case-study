@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto:300,500');
+@import url('https://fonts.googleapis.com/css?family=Zeyada');
 
 @import './abstract/variables';
 @import './abstract/animations';
@@ -7,8 +8,18 @@
 @import './base/base';
 @import './base/typography';
 
-@import './components/particles';
-@import './components/weather';
-
-@import './layout/callToAction';
 @import './layout/homePage';
+
+@import './components/particles';
+
+@import './components/brand';
+
+@import './layout/weather';
+@import './components/current';
+@import './components/forecast';
+@import './components/location';
+
+@import './layout/action';
+@import './components/signup';
+@import './components/terms';
+@import './components/zipcode';

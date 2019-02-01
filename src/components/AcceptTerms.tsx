@@ -10,7 +10,9 @@ export class AcceptTerms extends Component<any, any> {
 
     render() {
         return (
-            <div className="action__terms-and-conditions--accept">
+            <div
+                className="terms-and-conditions--accept"
+                onClick={this.props.acceptTerms}>
                 <input
                     name="accept"
                     type="checkbox"

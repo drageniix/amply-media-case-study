@@ -40,24 +40,24 @@ export class CurrentWeather extends Component<any, any> {
 
         return (
             <section className="weather">
-                <h4 className="weather__heading">
-                    <span className="weather__heading--span">
+                <h4 className="weather-location">
+                    <span className="weather-location--span">
                         {city}, {state}
                     </span>
                 </h4>
-                <div className="weather__current">
-                    <img className="weather__current--icon" src={iconLink} />
-                    <div className="weather__current--content">
-                        <p className="weather__current--header">Right Now</p>
-                        <p className="weather__current--description">
+                <div className="weather-current">
+                    <img className="weather-current--icon" src={iconLink} />
+                    <div className="weather-current--content">
+                        <p className="weather-current--header">Right Now</p>
+                        <p className="weather-current--description">
                             {description}
                         </p>
                     </div>
-                    <p className="weather__current--temperature">
+                    <p className="weather-current--temperature">
                         {temperature}°F
                     </p>
                 </div>
-                <div className="weather__forecast">
+                <div className="weather-forecast">
                     <span>High: {highTemperature}°F</span>
                     <span>Low: {lowTemperature}°F</span>
                 </div>

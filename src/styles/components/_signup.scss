@@ -1,0 +1,16 @@
+.signup {
+    cursor: pointer;
+    padding: 0.9rem;
+    background: rgb(9, 172, 36);
+    color: white;
+    font-weight: 500;
+    border: none;
+    border-radius: 0.1rem;
+
+    &:disabled {
+        background: rgb(96, 99, 96);
+    }
+    @include respond(phone) {
+        flex-basis: 100%;
+    }
+}

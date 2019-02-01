@@ -2,6 +2,7 @@ import React from 'react';
 import Particles from '../components/Particles';
 import CurrentWeather from '../components/CurrentWeather';
 import CallToAction from '../components/CallToAction';
+import Brand from '../components/Brand';
 
 const HomePage = () => {
     return (
@@ -9,6 +10,7 @@ const HomePage = () => {
             <Particles />
             <CurrentWeather />
             <CallToAction />
+            <Brand />
         </div>
     );
 };

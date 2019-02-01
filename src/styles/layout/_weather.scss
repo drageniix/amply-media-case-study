@@ -1,0 +1,12 @@
+.weather {
+    font-weight: 400;
+    background: rgba(#eee, 0.9);
+    padding: 2rem;
+    border-radius: 1rem;
+    margin-bottom: 2rem;
+    animation: slideDown 1s;
+    min-width: 32rem;
+    width: 50%;
+    max-width: 60rem;
+    @include clearfix;
+}

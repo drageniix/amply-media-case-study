@@ -27,7 +27,7 @@ export class EnterLocation extends Component<any, any> {
     render() {
         return (
             <input
-                className="action__zipcode"
+                className="zipcode"
                 placeholder="Your Zip Code"
                 value={this.state.location}
                 onChange={this.setNewLocation}

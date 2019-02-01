@@ -1,0 +1,33 @@
+.weather-location {
+    text-align: right;
+    font-size: 4.3rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: $color-white;
+    width: 100%;
+    margin-top: -6rem;
+    margin-left: 5rem;
+    transform: skew(-10deg, 5deg);
+
+    @include respond(tabLand) {
+        margin-top: -4rem;
+        font-size: 3rem;
+    }
+
+    @include respond(phone) {
+        font-size: 2.8rem;
+        margin-top: -2rem;
+        margin-left: 3rem;
+    }
+    &--span {
+        padding: 1rem 1.5rem;
+        box-decoration-break: clone;
+        background-image: linear-gradient(
+            to right bottom,
+            rgba($color-secondary, 0.95),
+            rgba($color-primary, 0.95)
+        );
+        background-size: cover;
+        background-position: top;
+    }
+}

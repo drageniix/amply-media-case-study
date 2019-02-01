@@ -12,13 +12,12 @@ export class CallToAction extends Component<any, any> {
     };
 
     render() {
-        console.log(this.props.signedUp);
         return (
             (!this.props.signedUp && (
                 <section className="action">
                     <EnterLocation />
                     <Signup />
-                    <div className="action__terms-and-conditions">
+                    <div className="terms-and-conditions">
                         <TermsAndConditions />
                         <AcceptTerms />
                     </div>
