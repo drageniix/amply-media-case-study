@@ -1,30 +1,27 @@
+import { Dispatch, ActionCreator, Action } from 'redux';
 import ReactGA from 'react-ga';
-ReactGA.initialize('UA-133606683-1');
-
 import {
     SET_LOCATION,
     SET_ERRROS,
-    SET_MODAL,
     SET_WEATHER,
     ACCEPT_TERMS,
     SIGNUP
 } from '../constants';
 
-export const setModal = modal => ({
-    type: SET_MODAL,
-    payload: modal
-});
+import { CurrentWeatherAction, StringAction } from './common-types';
 
-export const setErrors = error => ({
+ReactGA.initialize('UA-133606683-1');
+
+export const setErrors: ActionCreator<Action> = (errs: string | object) => ({
     type: SET_ERRROS,
-    payload: error
+    payload: errs
 });
 
-export const acceptTerms = () => ({
+export const acceptTerms: ActionCreator<Action> = () => ({
     type: ACCEPT_TERMS
 });
 
-export const signUp = () => {
+export const signUp: ActionCreator<Action> = () => {
     ReactGA.event({
         category: 'User',
         action: 'Created account'
@@ -36,14 +33,18 @@ export const signUp = () => {
     };
 };
 
-export const setLocation = location => dispatch => {
+export const setLocation = (location: string) => (
+    dispatch: Dispatch<StringAction>
+) => {
     dispatch({
         type: SET_LOCATION,
         payload: location
     });
 };
 
-export const getCurrentWeather = () => dispatch =>
+export const getCurrentWeather = () => (
+    dispatch: Dispatch<CurrentWeatherAction>
+) => {
     fetch(
         'https://j9l4zglte4.execute-api.us-east-1.amazonaws.com/api/ctl/weather'
     )
@@ -65,6 +66,7 @@ export const getCurrentWeather = () => dispatch =>
                     type: SET_WEATHER,
                     payload: weather
                 });
-            } else setErrors('Weather failed to load.');
+            }
         })
-        .catch(err => dispatch(setErrors(err)));
+        .catch(err => console.log(err)); //No true server response error, just tries again
+};

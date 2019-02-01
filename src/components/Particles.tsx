@@ -1,10 +1,16 @@
 import React from 'react';
+import { connect } from 'react-redux';
 import Particles from 'react-particles-js';
-const ParticleBackground = () => {
+import { getTemperatureColor } from '../redux/selectors/common';
+import { fullStateType } from '../redux/reducers/state-types';
+
+//Uses ParticlesJS and generated config file
+
+const ParticleBackground = ({ color }: { color: string }) => {
     return (
         <div>
             <Particles
-                className="particles"
+                className={'particles' + color}
                 params={{
                     particles: {
                         number: {
@@ -120,4 +126,8 @@ const ParticleBackground = () => {
     );
 };
 
-export default ParticleBackground;
+const mapStateToProps = ({ common }: fullStateType) => ({
+    color: getTemperatureColor(common)
+});
+
+export default connect(mapStateToProps)(ParticleBackground);

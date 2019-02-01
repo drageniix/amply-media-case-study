@@ -2,9 +2,10 @@ import { createStore, applyMiddleware, compose, combineReducers } from 'redux';
 import thunk from 'redux-thunk';
 import commonReducerCreator from './reducers/common';
 
-const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
+const composeEnhancers =
+    (window as any).__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 
-export default async isServer => {
+export default async (isServer?: boolean) => {
     const commonReducer = commonReducerCreator();
 
     const reducer = combineReducers({
@@ -15,9 +16,9 @@ export default async isServer => {
     if (isServer && typeof window === 'undefined') {
         store = createStore(reducer, composeEnhancers(applyMiddleware(thunk)));
     } else {
-        store = window.storen
-            ? window.store
-            : (window.store = createStore(
+        store = (window as any).store
+            ? (window as any).store
+            : ((window as any).store = createStore(
                   reducer,
                   composeEnhancers(applyMiddleware(thunk))
               ));

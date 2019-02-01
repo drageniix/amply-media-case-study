@@ -1,21 +1,26 @@
 .brand {
     text-align: center;
-    margin-bottom: 3rem;
-    position: fixed;
-    bottom: 0;
+    margin-bottom: 6rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 
-    p {
-        font-family: 'Zeyada';
+    &__title {
+        font-family: 'Bungee Inline';
+        text-transform: uppercase;
         font-style: italic;
         font-weight: 400;
         font-size: 7rem;
         white-space: nowrap;
         color: white;
-        text-decoration: underline;
-        text-decoration-color: rgb(82, 82, 82);
 
         @include respond(phone) {
-            font-size: 5rem;
+            font-size: 4rem;
         }
+    }
+
+    &__tagline {
+        margin-top: -2.2rem;
+        font-weight: 300;
     }
 }

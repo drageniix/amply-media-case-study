@@ -8,9 +8,9 @@ const HomePage = () => {
     return (
         <div className="homePage">
             <Particles />
+            <Brand />
             <CurrentWeather />
             <CallToAction />
-            <Brand />
         </div>
     );
 };

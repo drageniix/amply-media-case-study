@@ -1,20 +1,25 @@
 import React, { Component } from 'react';
-import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { getCurrentWeather } from '../redux/actions/common';
+import { getTemperatureColor } from '../redux/selectors/common';
+import { fullStateType, WeatherType } from '../redux/reducers/state-types';
 
-export class CurrentWeather extends Component<any, any> {
-    static propTypes = {
-        weather: PropTypes.object,
-        getCurrentWeather: PropTypes.func
-    };
-
+export class CurrentWeather extends Component<
+    {
+        weather: WeatherType;
+        color: String;
+        getCurrentWeather: () => void;
+    },
+    {
+        loaded: Boolean;
+    }
+> {
     state = {
         loaded: false
     };
 
     static getDerivedStateFromProps(nextProps: any, prevState: any) {
-        if (!nextProps.weather) {
+        if (!nextProps.weather.iconLink) {
             nextProps.getCurrentWeather();
         } else if (!prevState.loaded) {
             return { loaded: true };
@@ -23,25 +28,21 @@ export class CurrentWeather extends Component<any, any> {
     }
 
     render() {
-        const city = (this.props.weather && this.props.weather.city) || 'City';
-        const state =
-            (this.props.weather && this.props.weather.state) || 'State';
-        const temperature =
-            (this.props.weather && this.props.weather.temperature) || 0;
-        const highTemperature =
-            (this.props.weather && this.props.weather.highTemperature) || 0;
-        const lowTemperature =
-            (this.props.weather && this.props.weather.lowTemperature) || 0;
-        const description =
-            (this.props.weather && this.props.weather.description) ||
-            'Loading Description';
-        const iconLink =
-            (this.props.weather && this.props.weather.iconLink) || '';
+        const {
+            city,
+            state,
+            temperature,
+            highTemperature,
+            lowTemperature,
+            description,
+            iconLink
+        } = this.props.weather;
 
         return (
             <section className="weather">
                 <h4 className="weather-location">
-                    <span className="weather-location--span">
+                    <span
+                        className={'weather-location--span' + this.props.color}>
                         {city}, {state}
                     </span>
                 </h4>
@@ -58,16 +59,23 @@ export class CurrentWeather extends Component<any, any> {
                     </p>
                 </div>
                 <div className="weather-forecast">
-                    <span>High: {highTemperature}°F</span>
-                    <span>Low: {lowTemperature}°F</span>
+                    <span className="weather-forecast__type">High: </span>
+                    <span className="weather-forecast__temp">
+                        {highTemperature}°F
+                    </span>
+                    <span className="weather-forecast__type">Low: </span>
+                    <span className="weather-forecast__temp">
+                        {lowTemperature}°F
+                    </span>
                 </div>
             </section>
         );
     }
 }
 
-const mapStateToProps = (state: any) => ({
-    weather: state.common.weather
+const mapStateToProps = ({ common }: fullStateType) => ({
+    weather: common.weather,
+    color: getTemperatureColor(common) + '--reverse'
 });
 
 const mapDispatchToProps = {

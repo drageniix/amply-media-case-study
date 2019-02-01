@@ -1,35 +1,34 @@
-import React, { Component } from 'react';
-import PropTypes from 'prop-types';
+import React from 'react';
 import { connect } from 'react-redux';
 import EnterLocation from '../components/EnterLocation';
 import AcceptTerms from '../components/AcceptTerms';
 import Signup from '../components/Signup';
-import TermsAndConditions from '../components/TermsAndConditions';
+import { fullStateType } from '../redux/reducers/state-types';
 
-export class CallToAction extends Component<any, any> {
-    static propTypes = {
-        signedUp: PropTypes.bool
-    };
+export const CallToAction = ({
+    signedUp,
+    termsAndConditions
+}: {
+    signedUp: boolean;
+    termsAndConditions: string;
+}) =>
+    (!signedUp && (
+        <section className="action">
+            <EnterLocation />
+            <Signup />
+            <div className="terms-and-conditions">
+                <p className="terms-and-conditions--content">
+                    {termsAndConditions}
+                </p>
+                <AcceptTerms />
+            </div>
+        </section>
+    )) ||
+    null;
 
-    render() {
-        return (
-            (!this.props.signedUp && (
-                <section className="action">
-                    <EnterLocation />
-                    <Signup />
-                    <div className="terms-and-conditions">
-                        <TermsAndConditions />
-                        <AcceptTerms />
-                    </div>
-                </section>
-            )) ||
-            null
-        );
-    }
-}
-
-const mapStateToProps = (state: any) => ({
-    signedUp: state.common.signedUp
+const mapStateToProps = ({ common }: fullStateType) => ({
+    signedUp: common.signedUp,
+    termsAndConditions: common.termsAndConditions
 });
 
 export default connect(mapStateToProps)(CallToAction);

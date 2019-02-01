@@ -2,9 +2,18 @@
     text-align: end;
     margin-right: 2rem;
     margin-top: -2rem;
-    span {
+
+    &__type {
         font-size: 1.6rem;
-        margin-right: 1rem;
+        font-weight: 400;
+
+        &:not(:first-child) {
+            margin-left: 1rem;
+        }
+    }
+
+    &__temp {
+        font-weight: 300;
     }
 
     @include respond(phone) {

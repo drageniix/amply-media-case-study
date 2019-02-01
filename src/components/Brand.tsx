@@ -1,9 +1,9 @@
 import React from 'react';
 
-const Brand = () => {
+export const Brand = () => {
     return (
         <div className="brand">
-            <p>Amply Weather</p>
+            <p className="brand__title">Weatherly</p>
         </div>
     );
 };

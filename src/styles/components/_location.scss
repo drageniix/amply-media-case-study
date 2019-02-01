@@ -19,14 +19,10 @@
         margin-top: -2rem;
         margin-left: 3rem;
     }
+
     &--span {
         padding: 1rem 1.5rem;
         box-decoration-break: clone;
-        background-image: linear-gradient(
-            to right bottom,
-            rgba($color-secondary, 0.95),
-            rgba($color-primary, 0.95)
-        );
         background-size: cover;
         background-position: top;
     }
