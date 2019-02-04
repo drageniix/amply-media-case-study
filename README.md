@@ -1,6 +1,6 @@
 # Amply Media Case Study
 
-<img src="https://i.imgur.com/l1y1fCI.jpg">
+<img src="https://i.imgur.com/1NNkRiO.jpg">
 
 The completed case study can be found at [https://barrow-amply-media.netlify.com](https://barrow-amply-media.netlify.com). Alternatively, this repository can be cloned and run at **localhost:8080**
 
@@ -35,9 +35,9 @@ Google Analytics was used to explicitly track the signup button clicks, which ha
 ## Style Choices
 
 <p align="center">
-<img src="https://i.imgur.com/yAsbLiP.png" width=100>
-<img src="https://i.imgur.com/cojaTap.png" width=100>
-<img src="https://i.imgur.com/FoIUqWe.png" width=100>
+<img src="https://i.imgur.com/LYdcQYm.jpg" width=100>
+<img src="https://i.imgur.com/UMj7EVZ.jpg" width=100>
+<img src="https://i.imgur.com/sOLYtSf.jpg" width=100>
 </p>
 
 -   The color gradient will change depending on the temperature (0-50 degrees blue/purple, 50-70 yellow/green, 70+ red/orange). This gives the user the feeling of a truly responsive site that does more than just pull data from somewhere, it immerses you in it.
