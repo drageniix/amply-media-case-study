@@ -4,11 +4,11 @@
     z-index: -100;
     grid-column: 1 / 2;
     grid-row: 2 / 3;
-    max-height: 50vh;
+    height: 50vh;
     clip-path: polygon(0 0, 100% 0, 100% 40vh, 0 100%);
 
     @include respond(phone) {
-        max-height: 15vh;
+        height: 15vh;
         clip-path: polygon(0 0, 100% 0, 100% 11vh, 0 100%);
     }
 }
@@ -29,13 +29,13 @@
 .particles__image {
     grid-column: 1 / 2;
     grid-row: 2 / 3;
-    max-height: 50vh;
+    height: 50vh;
     opacity: 0.45;
     z-index: -50;
     clip-path: polygon(0 0, 100% 0, 100% 40vh, 0 100%);
 
     @include respond(phone) {
-        max-height: 15vh;
+        height: 15vh;
         clip-path: polygon(0 0, 100% 0, 100% 11vh, 0 100%);
     }
 }

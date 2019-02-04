@@ -64,8 +64,8 @@ export const getCurrentWeather = () => (
                     iconLink: today.iconLink
                 };
 
-                const week = json.daily.map((day: any) => ({
-                    dayOfWeek: day.weekday,
+                const week = json.daily.slice(0, 5).map((day: any) => ({
+                    dayOfWeek: day.weekday.substring(0, 3),
                     temp: Math.round(day.skyInfo),
                     description: day.description,
                     iconLink: day.iconLink

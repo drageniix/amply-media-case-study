@@ -44,7 +44,7 @@ Google Analytics was used to explicitly track the signup button clicks, which ha
 
 -   The background of header is made with [ParticlesJS](https://vincentgarreau.com/particles.js/). The constant soothing motion catches interest without being too overwhelming.
 
--   The current weather and weekly forecast have contrasting colors so that attention is drawn to main feature while not detracting from the feeling of consistency and completeness in a weather application.
+-   The current weather and weekly forecast have contrasting colors so that attention is drawn to main feature while not detracting from the feeling of consistency and completeness in a weather application. Inclusion of a weekly forecast promotes users to check back in the future to verify plans for their week.
 
 -   The Call To Action is centered on Desktop, right below the current weather, in order to group these two ideas together. On mobile, I felt it was more important to showcase as many features as possible before attempting to engage the user, which has been shown to increase conversion rates.
 
