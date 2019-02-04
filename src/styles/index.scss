@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Roboto:300,500');
-@import url('https://fonts.googleapis.com/css?family=Bungee+Inline');
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,500|Merienda+One');
 
 @import './abstract/variables';
 @import './abstract/animations';
@@ -13,12 +12,18 @@
 
 @import './components/particles';
 
+@import './layout/navigation';
 @import './components/brand';
+@import './components/links';
 
 @import './layout/weather';
 @import './components/current';
 @import './components/forecast';
 @import './components/location';
+
+@import './layout/highlights';
+@import './components/blurb';
+@import './components/weekly';
 
 @import './layout/action';
 @import './components/signup';

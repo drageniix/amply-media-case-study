@@ -3,14 +3,14 @@
         to right bottom,
         rgba($color-cold-primary, 0.95),
         rgba($color-cold-secondary, 0.95)
-    );
+    ) !important;
 
     &--reverse {
         background-image: linear-gradient(
             to right bottom,
             rgba($color-cold-secondary, 0.95),
             rgba($color-cold-primary, 0.95)
-        );
+        ) !important;
     }
 }
 
@@ -19,14 +19,14 @@
         to right bottom,
         rgba($color-cool-primary, 0.95),
         rgba($color-cool-secondary, 0.95)
-    );
+    ) !important;
 
     &--reverse {
         background-image: linear-gradient(
             to right bottom,
             rgba($color-cool-secondary, 0.95),
             rgba($color-cool-primary, 0.95)
-        );
+        ) !important;
     }
 }
 
@@ -36,7 +36,7 @@
         rgba($color-warm-primary, 0.95),
         rgba($color-warm-secondary, 0.95),
         rgba($color-warm-tertiary, 0.95)
-    );
+    ) !important;
 
     &--reverse {
         background-image: linear-gradient(
@@ -44,6 +44,6 @@
             rgba($color-warm-tertiary, 0.95),
             rgba($color-warm-secondary, 0.95),
             rgba($color-warm-primary, 0.95)
-        );
+        ) !important;
     }
 }

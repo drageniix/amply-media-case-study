@@ -3,6 +3,7 @@
     padding: 0.6rem;
     border: none;
     border-radius: 0.1rem;
+    max-width: 40rem;
 
     @include respond(phone) {
         padding: 1rem;

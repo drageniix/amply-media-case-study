@@ -1,3 +1,4 @@
+const BundleAnalyzer = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 const HtmlWebPackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
@@ -61,6 +62,7 @@ function getPlugins(isProduction) {
 
     if (isProduction) {
         plugins.unshift(
+            new BundleAnalyzer(),
             new CleanWebpackPlugin(['public'], {
                 verbose: false
             })

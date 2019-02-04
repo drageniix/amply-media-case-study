@@ -9,6 +9,7 @@ import {
 } from '../constants';
 
 import { CurrentWeatherAction, StringAction } from './common-types';
+import { DayType } from '../reducers/state-types';
 
 ReactGA.initialize('UA-133606683-1');
 
@@ -50,21 +51,29 @@ export const getCurrentWeather = () => (
     )
         .then(async res => {
             if (res.status === 200) {
-                const json = (await res.json()).today;
+                const json = await res.json();
 
+                const today = json.today;
                 const weather = {
-                    temperature: Math.round(json.temperature),
-                    highTemperature: Math.round(json.highTemperature),
-                    lowTemperature: Math.round(json.lowTemperature),
-                    city: json.city,
-                    state: json.state,
-                    description: json.description,
-                    iconLink: json.iconLink
+                    temperature: Math.round(today.temperature),
+                    highTemperature: Math.round(today.highTemperature),
+                    lowTemperature: Math.round(today.lowTemperature),
+                    city: today.city,
+                    state: today.state,
+                    description: today.description,
+                    iconLink: today.iconLink
                 };
+
+                const week = json.daily.map((day: any) => ({
+                    dayOfWeek: day.weekday,
+                    temp: Math.round(day.skyInfo),
+                    description: day.description,
+                    iconLink: day.iconLink
+                }));
 
                 dispatch({
                     type: SET_WEATHER,
-                    payload: weather
+                    payload: { weather, week }
                 });
             }
         })

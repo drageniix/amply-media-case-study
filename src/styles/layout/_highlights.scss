@@ -1,0 +1,32 @@
+.highlights {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-top: 1rem;
+
+    @include respond(phone) {
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+    }
+
+    & > * {
+        animation: slideUp 1s;
+        flex-basis: 33%;
+        margin: 2rem;
+        padding: 1rem;
+        border-radius: 1rem;
+        background: rgba(#eee, 0.9);
+
+        @include clearfix;
+
+        @include respond(phone) {
+            border-radius: 0.5rem;
+            margin: 2rem 1rem;
+            min-width: 32rem;
+            max-width: 70rem;
+            width: 95%;
+            flex-basis: 100%;
+        }
+    }
+}

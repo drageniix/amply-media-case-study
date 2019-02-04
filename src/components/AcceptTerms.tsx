@@ -11,12 +11,7 @@ export const AcceptTerms = ({
     acceptTerms: (event: MouseEvent | ChangeEvent) => void;
 }) => (
     <div className="terms-and-conditions--accept" onClick={acceptTerms}>
-        <input
-            name="accept"
-            type="checkbox"
-            checked={acceptedTerms}
-            onChange={acceptTerms}
-        />
+        <input name="accept" type="checkbox" checked={acceptedTerms} />
         <label htmlFor="accept">Accept Terms</label>
     </div>
 );

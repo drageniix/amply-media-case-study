@@ -1,26 +1,34 @@
 .brand {
-    text-align: center;
-    margin-bottom: 6rem;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
 
-    &__title {
-        font-family: 'Bungee Inline';
-        text-transform: uppercase;
-        font-style: italic;
-        font-weight: 400;
-        font-size: 7rem;
-        white-space: nowrap;
-        color: white;
+    &__icon {
+        width: 4rem;
+        height: 4rem;
+        animation: rotate 1s;
+        margin-right: 2rem;
+
+        &:hover {
+            animation: rotate 10s infinite linear;
+        }
 
         @include respond(phone) {
-            font-size: 4rem;
+            width: 3rem;
+            height: 3rem;
         }
     }
 
-    &__tagline {
-        margin-top: -2.2rem;
+    &__title {
+        font-family: 'Merienda One';
         font-weight: 300;
+        font-size: 3rem;
+        white-space: nowrap;
+        color: #eee;
+
+        @include respond(phone) {
+            font-size: 2rem;
+        }
     }
 }

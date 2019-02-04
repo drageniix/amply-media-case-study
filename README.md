@@ -1,6 +1,6 @@
 # Amply Media Case Study
 
-<img src="https://i.imgur.com/2XcwJ61.png">
+<img src="https://i.imgur.com/l1y1fCI.jpg">
 
 The completed case study can be found at [https://barrow-amply-media.netlify.com](https://barrow-amply-media.netlify.com). Alternatively, this repository can be cloned and run at **localhost:8080**
 
@@ -35,9 +35,9 @@ Google Analytics was used to explicitly track the signup button clicks, which ha
 ## Style Choices
 
 <p align="center">
-<img src="https://i.imgur.com/VkPvxFP.png" width=100>
-<img src="https://i.imgur.com/lReFIIO.png" width=100>
-<img src="https://i.imgur.com/faQ0mjc.png" width=100>
+<img src="https://i.imgur.com/yAsbLiP.png" width=100>
+<img src="https://i.imgur.com/cojaTap.png" width=100>
+<img src="https://i.imgur.com/FoIUqWe.png" width=100>
 </p>
 
 -   The background of body is made with [ParticlesJS](https://vincentgarreau.com/particles.js/). The constant soothing motion catches interest without being too overwhelming.

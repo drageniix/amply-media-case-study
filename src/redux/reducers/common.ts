@@ -15,7 +15,8 @@ const initialState: commonStateType = {
         lowTemperature: 0,
         description: 'Loading Description',
         iconLink: ''
-    }
+    },
+    week: []
 };
 
 export default () => (
@@ -30,7 +31,7 @@ export default () => (
         case SET_LOCATION:
             return { ...state, location: payload };
         case SET_WEATHER:
-            return { ...state, weather: payload };
+            return { ...state, weather: payload.weather, week: payload.week };
         default:
             return state;
     }

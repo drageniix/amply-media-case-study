@@ -1,12 +1,21 @@
 .weather {
     font-weight: 400;
-    background: rgba(#eee, 0.9);
+    background: rgba(#eee, 0.85);
     padding: 2rem;
     border-radius: 1rem;
-    margin-bottom: 2rem;
+    margin: auto;
     animation: slideDown 1s;
     min-width: 32rem;
     width: 50%;
     max-width: 60rem;
+    grid-row: 2 / 3;
+    grid-column: 1 / 2;
     @include clearfix;
+
+    @include respond(phone) {
+        margin-top: -5rem;
+        grid-row: 3 / 4;
+        background: none;
+        width: 80%;
+    }
 }

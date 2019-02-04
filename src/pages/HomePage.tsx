@@ -1,16 +1,18 @@
 import React from 'react';
 import Particles from '../components/Particles';
 import CurrentWeather from '../components/CurrentWeather';
-import CallToAction from '../components/CallToAction';
-import Brand from '../components/Brand';
+import Navigation from '../components/Navigation';
+import Highlights from '../components/highlights';
+import Footer from '../components/Footer';
 
 const HomePage = () => {
     return (
         <div className="homePage">
+            <Navigation />
             <Particles />
-            <Brand />
             <CurrentWeather />
-            <CallToAction />
+            <Highlights />
+            <Footer />
         </div>
     );
 };

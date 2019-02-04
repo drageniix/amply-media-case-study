@@ -1,4 +1,4 @@
-import { WeatherType } from '../reducers/state-types';
+import { WeatherType, DayType } from '../reducers/state-types';
 
 export type StringAction = {
     type: String;
@@ -7,5 +7,5 @@ export type StringAction = {
 
 export type CurrentWeatherAction = {
     type: String;
-    payload: WeatherType;
+    payload: { weather: WeatherType; week: DayType[] };
 };

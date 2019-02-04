@@ -1,0 +1,23 @@
+.navigation {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+    background-color: #343a40;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.75rem 2rem;
+
+    @include respond(tinyPhone) {
+        padding: 0.75rem 1rem;
+    }
+}
+
+.footer {
+    position: fixed;
+    bottom: 0;
+    height: 1rem;
+    background-color: #343a40;
+    width: 100%;
+}
