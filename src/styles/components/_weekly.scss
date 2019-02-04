@@ -25,6 +25,14 @@
 
         &:not(:last-child) {
             margin-right: 1rem;
+
+            @include respond(phone) {
+                margin-right: 3rem;
+            }
+
+            @include respond(tinyPhone) {
+                margin-right: 1rem;
+            }
         }
     }
 }

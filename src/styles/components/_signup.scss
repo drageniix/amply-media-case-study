@@ -12,6 +12,8 @@
         background: #343a40;
     }
     @include respond(phone) {
+        font-weight: 400;
         flex-basis: 100%;
+        font-size: 2rem;
     }
 }

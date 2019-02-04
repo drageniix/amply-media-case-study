@@ -9,7 +9,7 @@
 
     @include respond(phone) {
         max-height: 15vh;
-        clip-path: polygon(0 0, 100% 0, 100% 10vh, 0 100%);
+        clip-path: polygon(0 0, 100% 0, 100% 11vh, 0 100%);
     }
 }
 
@@ -36,6 +36,6 @@
 
     @include respond(phone) {
         max-height: 15vh;
-        clip-path: polygon(0 0, 100% 0, 100% 10vh, 0 100%);
+        clip-path: polygon(0 0, 100% 0, 100% 11vh, 0 100%);
     }
 }

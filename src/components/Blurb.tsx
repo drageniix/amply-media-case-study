@@ -4,7 +4,7 @@ const Blurb = () => {
     return (
         <div className="blurb">
             <img
-                src="https://wtop.com/wp-content/uploads/2019/02/dave_snow_sized_2-727x485.jpg"
+                src="https://media.pixcove.com/X/7/9/Winter-Season-Parking-Cars-Free-Image-Snow-Minneap-6960.jpg"
                 className="blurb__image"
             />
             <h1 className="blurb__title">Breaking Weather</h1>
