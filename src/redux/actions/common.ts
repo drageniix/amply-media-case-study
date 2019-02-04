@@ -55,12 +55,12 @@ export const getCurrentWeather = () => (
 
                 const today = json.today;
                 const weather = {
-                    temperature: 67, //Math.round(today.temperature),
-                    highTemperature: 70, //Math.round(today.highTemperature),
-                    lowTemperature: 60, //Math.round(today.lowTemperature),
+                    temperature: Math.round(today.temperature),
+                    highTemperature: Math.round(today.highTemperature),
+                    lowTemperature: Math.round(today.lowTemperature),
                     city: today.city,
                     state: today.state,
-                    description: 'Fog. Cool', //today.description,
+                    description: today.description,
                     iconLink: today.iconLink
                 };
 
